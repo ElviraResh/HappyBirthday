@@ -29,11 +29,18 @@ html {
 
 body {
   font-family: 'Open Sans';
-  background: #FFF1F8;
+  
   display: flex;
   flex-direction: column;
   height: 100vh;
-  padding-bottom: 17px;
+}
+
+.women {
+  background-color: #FFF1F8;
+}
+
+.men {
+  background-color: #EFF9FE;
 }
 
 button {
@@ -43,6 +50,24 @@ button {
 img {
   min-width: 100%;
   height: auto;
+}
+
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.men svg {
+  fill: #1178B2;
+}
+
+.women svg {
+  fill: #C300C7;
 }
 
 .container {
@@ -56,7 +81,7 @@ img {
   position: relative;
   z-index: 1;
   padding: 28px 0;
-  background: #FFFFFF;
+  background-color: #FFFFFF;
   box-shadow: 0px 1px 20px rgba(72, 3, 38, 0.07);
 }
 
@@ -64,17 +89,26 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 30px;
 }
 
 .header__button-change {
   width: 300px;
   height: 65px;
-  background: #C300C7;
+  font-weight: 700;
   border-radius: 30px;
   border: none;
   font-size: 18px;
   color: #FFFFFF;
   margin-right: 30px;
+}
+
+.men .header__button-change {
+  background-color: #1178B2;
+}
+
+.women .header__button-change {
+  background-color: #C300C7;
 }
 
 .header__button-change:last-child {
@@ -106,10 +140,17 @@ img {
   background-image: url('../img/ri_women-line.svg');
 }
 
+.men .header__button-gender_men {
+  border-color: #1178B2;
+}
+
+.women .header__button-gender_women {
+  border-color: #C300C7;
+}
 
 .card {
   flex-grow: 1;
-  padding: 32px 0;
+  padding: 32px 0 15px;
   display: flex;
   align-items: center;
 }
@@ -132,8 +173,40 @@ img {
   top: 50%;
   transform: translate(-50%, -50%);
   font-size: max(3em, min(calc(100vw * 3 / 140), 6em));
-  font-family: 'Bad Script';
+  
   line-height: 1.6;
+}
+
+.women .card__text {
+  font-family: 'Bad Script';
+}
+
+.men .card__text {
+  font-family: 'Open Sans';
+  font-weight: 700;
+}
+.footer {
+  padding: 17px 0;
+}
+
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.footer__contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: #000000;
+}
+
+.footer__social {
+  display: flex;
+  gap: 16px;
+
 }
 
 @media (max-width: 880px) {
@@ -159,5 +232,16 @@ img {
     height: 40px;
     background-size: 30px;
     margin-right: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer__container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .footer__contacts {
+    order: 1;
   }
 }
