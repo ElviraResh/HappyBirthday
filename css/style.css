@@ -21,6 +21,7 @@
 
 html {
   box-sizing: border-box;
+
 }
 
 * {
@@ -29,7 +30,6 @@ html {
 
 body {
   font-family: 'Open Sans';
-  
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -74,7 +74,6 @@ ul {
   max-width: 1300px;
   padding: 0 20px;
   margin: 0 auto;
-
 }
 
 .header {
@@ -173,7 +172,6 @@ ul {
   top: 50%;
   transform: translate(-50%, -50%);
   font-size: max(3em, min(calc(100vw * 3 / 140), 6em));
-  
   line-height: 1.6;
 }
 
@@ -206,7 +204,6 @@ ul {
 .footer__social {
   display: flex;
   gap: 16px;
-
 }
 
 @media (max-width: 880px) {
